@@ -1,0 +1,1176 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #071c16;
+
+    color: white;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN APP
+   ========================================= */
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+
+    background: #09251d;
+}
+
+
+/* =========================================
+   DESKTOP TWO COLUMN LAYOUT
+   ========================================= */
+
+.desktop-layout {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   LEFT SIDE
+   ========================================= */
+
+.left-side {
+
+    width: 100%;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+   ========================================= */
+
+.right-side {
+
+    width: 100%;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.vale-logo-section {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.vale-logo-section img {
+
+    width: 75%;
+
+    max-width: 420px;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================================
+   BOOK YOUR EXECUTIVE TAXI
+   ========================================= */
+
+.lower-title {
+
+    color: #d5b65c;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    margin: 0 0 22px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   DESCRIPTION BOX
+   ========================================= */
+
+.description-box {
+
+    width: 100%;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    text-align: left;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   DESCRIPTION ICON
+   ========================================= */
+
+.description-icon {
+
+    width: 20px;
+
+    height: 20px;
+
+    min-width: 20px;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: #d5b65c;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    margin-top: 1px;
+}
+
+
+/* =========================================
+   DESCRIPTION TEXT
+   ========================================= */
+
+.description-content {
+
+    flex: 1;
+}
+
+
+.description-content p {
+
+    color: #d5b65c;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+
+    letter-spacing: 0.3px;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   AIRPORT TRANSFERS
+   ========================================= */
+
+.airport-box {
+
+    width: 100%;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 8px;
+
+    padding: 18px 15px;
+
+    text-align: center;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   AIRPORT ICON
+   ========================================= */
+
+.airport-icon {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+
+.airport-icon img {
+
+    width: 30px;
+
+    height: 30px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   AIRPORT TITLE
+   ========================================= */
+
+.airport-box h3 {
+
+    color: #d5b65c;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================
+   AIRPORT DESCRIPTION
+   ========================================= */
+
+.airport-box p {
+
+    color: #d5b65c;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   WEBSITE BUTTON
+   ========================================= */
+
+.website-link {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 6px;
+
+    color: #d5b65c;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.2s;
+}
+
+
+.website-link:hover {
+
+    background: #d5b65c;
+
+    color: #09251d;
+}
+
+
+/* =========================================
+   CONTACT BOX
+   ========================================= */
+
+.contact-box {
+
+    width: 100%;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 8px;
+
+    padding: 18px 10px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+/* =========================================
+   CONTACT ITEMS
+   ========================================= */
+
+.contact-item {
+
+    text-align: center;
+}
+
+
+.contact-icon {
+
+    font-size: 30px;
+
+    color: #d5b65c;
+
+    margin-bottom: 7px;
+}
+
+
+.phone-icon {
+
+    color: #d5b65c;
+}
+
+
+.whatsapp-icon {
+
+    color: #20d66b;
+}
+
+
+.contact-item h4 {
+
+    color: #d5b65c;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 8px;
+}
+
+
+.contact-item a {
+
+    color: #d5b65c;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    line-height: 1.5;
+}
+
+
+.contact-item a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   QR CODE
+   ========================================= */
+
+.qr-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.qr-container img {
+
+    width: 95px;
+
+    height: 95px;
+
+    object-fit: contain;
+
+    background: white;
+
+    padding: 2px;
+}
+
+
+/* =========================================
+   BOOKING FORM CONTAINER
+   ========================================= */
+
+.container {
+
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 10px;
+
+    background: #09251d;
+}
+
+
+/* =========================================
+   FORM SECTIONS
+   ========================================= */
+
+.section {
+
+    margin-bottom: 18px;
+}
+
+
+.section h2 {
+
+    color: #d5b65c;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   TRIP BUTTONS
+   ========================================= */
+
+.trip-buttons {
+
+    display: flex;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.trip-btn {
+
+    flex: 1;
+
+    padding: 13px;
+
+    background: transparent;
+
+    border: 1px solid #d5b65c;
+
+    color: #d5b65c;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+.trip-btn:hover {
+
+    background: #16382d;
+}
+
+
+.trip-btn.active {
+
+    background: #d5b65c;
+
+    color: #09251d;
+}
+
+
+/* =========================================
+   INPUT GROUP
+   ========================================= */
+
+.input-group {
+
+    margin-bottom: 10px;
+
+    flex: 1;
+}
+
+
+.input-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    color: #d5b65c;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+input {
+
+    width: 100%;
+
+    padding: 11px;
+
+    background: #0d3026;
+
+    border: 1px solid #46645b;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+input:focus {
+
+    border-color: #d5b65c;
+}
+
+
+input::placeholder {
+
+    color: #82948e;
+}
+
+
+/* =========================================
+   DATE / TIME
+   ========================================= */
+
+input[type="date"],
+input[type="time"] {
+
+    color-scheme: dark;
+}
+
+
+/* =========================================
+   ROW
+   ========================================= */
+
+.row {
+
+    display: flex;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.row .input-group {
+
+    flex: 1;
+}
+
+
+/* =========================================
+   ESTIMATE BUTTON
+   ========================================= */
+
+.estimate-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    background: #d5b65c;
+
+    border: none;
+
+    border-radius: 6px;
+
+    color: #09251d;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.estimate-btn:hover {
+
+    background: #e4ca78;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   RESULT
+   ========================================= */
+
+.result {
+
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 7px;
+
+    text-align: center;
+}
+
+
+.result h2 {
+
+    color: #d5b65c;
+
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+
+.price {
+
+    margin: 12px 0;
+
+    font-size: 40px;
+
+    font-weight: bold;
+
+    color: #d5b65c;
+}
+
+
+#summary {
+
+    color: #c5cfcc;
+
+    line-height: 1.5;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CONFIRM BUTTON
+   ========================================= */
+
+.confirm-btn {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #d5b65c;
+
+    background: transparent;
+
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.confirm-btn:hover {
+
+    background: #16382d;
+}
+
+
+/* =========================================
+   SUCCESS
+   ========================================= */
+
+.success {
+
+    display: none;
+
+    margin-top: 18px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border: 1px solid #d5b65c;
+
+    border-radius: 7px;
+}
+
+
+.success h2 {
+
+    color: #d5b65c;
+
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+
+.success p {
+
+    color: #c5cfcc;
+
+    margin-top: 7px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TABLET / IPAD
+   ========================================= */
+
+@media (min-width: 768px) and (max-width: 1100px) {
+
+    .desktop-layout {
+
+        padding: 15px;
+
+        gap: 12px;
+
+        grid-template-columns: 0.95fr 1.05fr;
+    }
+
+
+    .left-side {
+
+        padding: 8px;
+    }
+
+
+    .vale-logo-section img {
+
+        width: 85%;
+    }
+
+
+    .lower-title {
+
+        font-size: 19px;
+
+        letter-spacing: 1.5px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .description-box {
+
+        padding: 13px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .description-content p {
+
+        font-size: 12px;
+    }
+
+
+    .airport-box {
+
+        padding: 15px 12px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .airport-box h3 {
+
+        font-size: 15px;
+    }
+
+
+    .airport-box p {
+
+        font-size: 12px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .website-link {
+
+        font-size: 11px;
+
+        padding: 9px;
+    }
+
+
+    .contact-box {
+
+        padding: 14px 6px;
+    }
+
+
+    .contact-icon {
+
+        font-size: 24px;
+    }
+
+
+    .contact-item h4 {
+
+        font-size: 10px;
+    }
+
+
+    .contact-item a {
+
+        font-size: 11px;
+    }
+
+
+    .qr-container img {
+
+        width: 75px;
+
+        height: 75px;
+    }
+
+
+    .container {
+
+        padding: 12px;
+    }
+
+
+    .section {
+
+        margin-bottom: 14px;
+    }
+
+
+    .section h2 {
+
+        font-size: 10px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .input-group {
+
+        margin-bottom: 7px;
+    }
+
+
+    .input-group label {
+
+        font-size: 11px;
+
+        margin-bottom: 3px;
+    }
+
+
+    input {
+
+        padding: 9px;
+
+        font-size: 13px;
+    }
+
+
+    .trip-btn {
+
+        padding: 11px;
+
+        font-size: 14px;
+    }
+
+
+    .estimate-btn {
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .desktop-layout {
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 15px;
+
+        gap: 20px;
+    }
+
+
+    /* BOOKING FORM FIRST */
+
+    .right-side {
+
+        order: 1;
+    }
+
+
+    /* INFORMATION SECOND */
+
+    .left-side {
+
+        order: 2;
+
+        padding: 5px 0;
+    }
+
+
+    .container {
+
+        padding: 15px;
+    }
+
+
+    .vale-logo-section img {
+
+        width: 90%;
+
+        max-width: 400px;
+    }
+
+
+    .lower-title {
+
+        font-size: 21px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .description-content p {
+
+        font-size: 11px;
+    }
+
+
+    .airport-box p {
+
+        font-size: 15px;
+    }
+
+
+    .airport-box h3 {
+
+        font-size: 18px;
+    }
+
+
+    .website-link {
+
+        font-size: 15px;
+    }
+
+
+    .contact-box {
+
+        padding: 20px 7px;
+    }
+
+
+    .qr-container img {
+
+        width: 100px;
+
+        height: 100px;
+    }
+
+
+    .contact-icon {
+
+        font-size: 28px;
+    }
+
+
+    .contact-item h4 {
+
+        font-size: 12px;
+    }
+
+
+    .contact-item a {
+
+        font-size: 14px;
+    }
+
+
+    .row {
+
+        gap: 8px;
+    }
+
+
+    input {
+
+        padding: 12px;
+
+        font-size: 15px;
+    }
+
+
+    .trip-btn {
+
+        padding: 14px;
+
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .desktop-layout {
+
+        padding: 10px;
+    }
+
+
+    .container {
+
+        padding: 12px;
+    }
+
+
+    .lower-title {
+
+        font-size: 19px;
+    }
+
+
+    .description-content p {
+
+        font-size: 12px;
+    }
+
+
+    .qr-container img {
+
+        width: 85px;
+
+        height: 85px;
+    }
+
+
+    .contact-item a {
+
+        font-size: 13px;
+    }
+
+}
+/* =========================================
+   Hi
+   ========================================= */
+
+.hihihi {
+
+    display: flex;
+
+    gap: 8px;
+
+    width: 100%;
+}
+
+
+.hihihi .input-group {
+
+    flex: 1;
+}
