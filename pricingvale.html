@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estimated Cost - Vale Executive Cars</title>
+
+    <!-- CONNECT CSS -->
+    <link rel="stylesheet" href="style-pricing.css">
+</head>
+
+<body>
+
+<div class="pricing-page">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="pricing-header">
+
+        <button class="back-button" onclick="goBack()">
+            ←
+        </button>
+
+        <h1>ESTIMATED COST</h1>
+
+        <div></div>
+
+    </header>
+
+
+    <div class="header-line"></div>
+
+
+    <!-- =========================
+         JOURNEY
+    ========================== -->
+
+    <section class="journey">
+
+        <div class="location-box">
+
+            <div class="location-icon building">
+                ▦
+            </div>
+
+            <div>
+                <span class="location-label">
+                    PICKUP
+                </span>
+
+                <strong id="pickupLocation">
+                    London
+                </strong>
+            </div>
+
+        </div>
+
+
+        <div class="journey-middle">
+
+            <span class="small-route-dot"></span>
+
+            <div class="car-circle">
+                🚘
+            </div>
+
+            <div class="journey-line"></div>
+
+        </div>
+
+
+        <div class="location-box">
+
+            <div class="location-icon pin">
+                ●
+            </div>
+
+            <div>
+                <span class="location-label">
+                    DROP-OFF
+                </span>
+
+                <strong id="dropoffLocation">
+                    Manchester
+                </strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DISTANCE
+    ========================== -->
+
+    <section class="distance-section">
+
+        <label for="distanceInput">
+            ROUTE DISTANCE
+        </label>
+
+        <div class="distance-input-wrapper">
+
+            <input
+                type="number"
+                id="distanceInput"
+                value="10"
+                min="0"
+                step="0.01"
+                oninput="updatePricing()"
+            >
+
+            <span>
+                miles
+            </span>
+
+        </div>
+
+        <div class="distance-conversion" id="distanceConversion">
+            10.00 mi = 16.09 km
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VEHICLES
+    ========================== -->
+
+    <section class="vehicle-container">
+
+
+        <!-- =========================
+             PREMIUM VEHICLE
+        ========================== -->
+
+        <div
+            class="vehicle-card"
+            id="saloonCard"
+            onclick="selectVehicle('saloon')"
+        >
+
+            <div class="selection-circle" id="saloonCircle">
+            </div>
+
+
+            <div class="vehicle-picture premium-picture">
+
+                <!-- Replace this with your actual vehicle image -->
+                <div class="car-placeholder">
+                    PREMIUM
+                </div>
+
+            </div>
+
+
+            <h2>
+                PREMIUM<br>
+                VEHICLE
+            </h2>
+
+            <p>
+                Comfortable everyday travel
+            </p>
+
+
+            <div class="fare-box">
+
+                <span>
+                    FARE
+                </span>
+
+                <strong id="saloonFare">
+                    £43.50
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             EXECUTIVE VEHICLE
+        ========================== -->
+
+        <div
+            class="vehicle-card selected"
+            id="executiveCard"
+            onclick="selectVehicle('executive')"
+        >
+
+            <div class="popular-label">
+                ★ POPULAR
+            </div>
+
+
+            <div
+                class="selection-circle checked"
+                id="executiveCircle"
+            >
+                ✓
+            </div>
+
+
+            <div class="vehicle-picture executive-picture">
+
+                <!-- Replace this with your actual vehicle image -->
+                <div class="car-placeholder">
+                    EXECUTIVE
+                </div>
+
+            </div>
+
+
+            <h2>
+                EXECUTIVE<br>
+                VEHICLE
+            </h2>
+
+            <p>
+                Premium ride, business class
+            </p>
+
+
+            <div class="fare-box">
+
+                <span>
+                    FARE
+                </span>
+
+                <strong id="executiveFare">
+                    £75.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             MPV
+        ========================== -->
+
+        <div
+            class="vehicle-card"
+            id="mpvCard"
+            onclick="selectVehicle('mpv')"
+        >
+
+            <div
+                class="selection-circle"
+                id="mpvCircle"
+            >
+            </div>
+
+
+            <div class="vehicle-picture mpv-picture">
+
+                <!-- Replace this with your actual vehicle image -->
+                <div class="car-placeholder">
+                    MPV
+                </div>
+
+            </div>
+
+
+            <h2>
+                EXECUTIVE<br>
+                MPV (7 Seater)
+            </h2>
+
+            <p>
+                Extra space for groups & luggage
+            </p>
+
+
+            <div class="fare-box">
+
+                <span>
+                    FARE
+                </span>
+
+                <strong id="mpvFare">
+                    £82.50
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FARE BREAKDOWN
+    ========================== -->
+
+    <section class="breakdown">
+
+        <div class="breakdown-header">
+
+            <div>
+                <h3>
+                    FARE BREAKDOWN
+                </h3>
+
+                <span id="breakdownVehicle">
+                    EXECUTIVE VEHICLE
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="breakdown-row">
+
+            <span>
+                Distance
+            </span>
+
+            <strong id="breakdownDistance">
+                10.00 mi / 16.09 km
+            </strong>
+
+        </div>
+
+
+        <div class="breakdown-row">
+
+            <span>
+                Rate
+            </span>
+
+            <strong id="breakdownRate">
+                £7.50 / mi
+            </strong>
+
+        </div>
+
+
+        <div class="breakdown-row">
+
+            <span>
+                Calculation
+            </span>
+
+            <strong id="breakdownCalculation">
+                10.00 × £7.50
+            </strong>
+
+        </div>
+
+
+        <div class="breakdown-row final-breakdown">
+
+            <span>
+                Estimated fare
+            </span>
+
+            <strong id="breakdownFare">
+                £75.00
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BOTTOM
+    ========================== -->
+
+    <section class="bottom-section">
+
+
+        <div class="total-box">
+
+            <div>
+
+                <span class="total-title">
+                    ESTIMATED TOTAL
+                </span>
+
+                <small id="totalDescription">
+                    EXECUTIVE VEHICLE • ONE WAY
+                </small>
+
+            </div>
+
+
+            <strong id="totalFare">
+                £75.00
+            </strong>
+
+        </div>
+
+
+        <button
+            class="review-button"
+            onclick="reviewDetails()"
+        >
+
+            <span>
+                ▤
+            </span>
+
+            REVIEW DETAILS
+
+        </button>
+
+
+        <button
+            class="cancel-button"
+            onclick="cancelBooking()"
+        >
+
+            ×
+
+            CANCEL
+
+        </button>
+
+    </section>
+
+</div>
+
+
+<!-- CONNECT JAVASCRIPT -->
+<script src="pricing-list.js"></script>
+
+</body>
+</html>

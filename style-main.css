@@ -1,0 +1,815 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    background: #00251f;
+
+    color: #ffffff;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.home-page {
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 70px;
+
+    background: #00251f;
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.main-container {
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    min-height: 600px;
+
+    display: grid;
+
+    grid-template-columns: 1.45fr 0.75fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.left-content {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo-container {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 55px;
+
+}
+
+
+.logo-image {
+
+    display: block;
+
+    width: min(650px, 90%);
+
+    max-height: 210px;
+
+    object-fit: contain;
+
+}
+
+
+/* =====================================================
+   BOOKING TEXT
+===================================================== */
+
+.booking-text {
+
+    width: 100%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+
+}
+
+
+.booking-text:hover {
+
+    transform: scale(1.025);
+
+    filter:
+        drop-shadow(
+            0 5px 12px
+            rgba(216, 155, 43, 0.12)
+        );
+
+}
+
+
+/* =====================================================
+   TOUCH HERE
+===================================================== */
+
+.touch-text {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: clamp(25px, 3vw, 38px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #d79b2c;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =====================================================
+   BOOK A
+===================================================== */
+
+.book-text {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: clamp(55px, 6.5vw, 88px);
+
+    line-height: 0.9;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #ffffff;
+
+}
+
+
+/* =====================================================
+   TAXI RIDE
+===================================================== */
+
+.taxi-text {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: clamp(55px, 6.5vw, 88px);
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    color: #d79b2c;
+
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.right-content {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =====================================================
+   TAXI BUTTON CONTAINER
+
+   IMPORTANT:
+   This controls the animation area.
+===================================================== */
+
+.taxi-button-container {
+
+    position: relative;
+
+    width: 350px;
+
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   MAIN TAXI BUTTON
+===================================================== */
+
+.taxi-button {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        radial-gradient(
+            circle at 40% 35%,
+            #f8c352 0%,
+            #efb13b 55%,
+            #d39320 100%
+        );
+
+    border: 9px solid #8c631d;
+
+    box-shadow:
+
+        0 0 0 6px #273629,
+
+        0 0 0 9px #7f5d1d,
+
+        0 18px 35px
+        rgba(0, 0, 0, 0.4);
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =====================================================
+   BUTTON HOVER
+===================================================== */
+
+.taxi-button-container:hover .taxi-button {
+
+    transform: scale(1.04);
+
+    box-shadow:
+
+        0 0 0 6px #35432f,
+
+        0 0 0 9px #a47522,
+
+        0 20px 45px
+        rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* =====================================================
+   TAXI ICON
+===================================================== */
+
+.taxi-icon {
+
+    width: 125px;
+
+    height: 125px;
+
+    object-fit: contain;
+
+}
+
+
+/* =====================================================
+   ANIMATED RIPPLE CIRCLES
+
+   These circles start behind the button,
+   expand approximately 80px,
+   then disappear.
+
+   They do NOT cover the whole screen.
+===================================================== */
+
+.ripple {
+
+    position: absolute;
+
+    z-index: 1;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 270px;
+
+    height: 270px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(194, 145, 43, 0.65);
+
+    transform:
+
+        translate(-50%, -50%)
+
+        scale(1);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   RIPPLE 1
+===================================================== */
+
+.ripple-one {
+
+    animation:
+        taxiRipple 3.2s
+        ease-out
+        infinite;
+
+}
+
+
+/* =====================================================
+   RIPPLE 2
+===================================================== */
+
+.ripple-two {
+
+    animation:
+        taxiRipple 3.2s
+        ease-out
+        infinite;
+
+    animation-delay: 1.05s;
+
+}
+
+
+/* =====================================================
+   RIPPLE 3
+===================================================== */
+
+.ripple-three {
+
+    animation:
+        taxiRipple 3.2s
+        ease-out
+        infinite;
+
+    animation-delay: 2.1s;
+
+}
+
+
+/* =====================================================
+   RIPPLE ANIMATION
+
+   270px → 430px
+
+   That means the circle grows about
+   80px outward from the button.
+===================================================== */
+
+@keyframes taxiRipple {
+
+    0% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1);
+
+        opacity: 0;
+
+    }
+
+
+    10% {
+
+        opacity: 0.65;
+
+    }
+
+
+    65% {
+
+        opacity: 0.35;
+
+    }
+
+
+    100% {
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.59);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+
+    .home-page {
+
+        padding: 35px;
+
+    }
+
+
+    .main-container {
+
+        grid-template-columns:
+            1.2fr
+            0.8fr;
+
+        gap: 25px;
+
+    }
+
+
+    .logo-image {
+
+        width: 90%;
+
+    }
+
+
+    .taxi-button-container {
+
+        width: 310px;
+
+        height: 310px;
+
+    }
+
+
+    .taxi-button {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+
+    .ripple {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+
+    .taxi-icon {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+    .home-page {
+
+        min-height: 100vh;
+
+        padding:
+
+            30px
+            18px
+            45px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .main-container {
+
+        width: 100%;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 50px;
+
+    }
+
+
+    /* ==========================
+       LEFT
+    =========================== */
+
+    .left-content {
+
+        width: 100%;
+
+    }
+
+
+    /* ==========================
+       LOGO
+    =========================== */
+
+    .logo-container {
+
+        margin-bottom: 35px;
+
+    }
+
+
+    .logo-image {
+
+        width: 94%;
+
+        max-height: 150px;
+
+    }
+
+
+    /* ==========================
+       TEXT
+    =========================== */
+
+    .touch-text {
+
+        font-size: 22px;
+
+        margin-bottom: 9px;
+
+    }
+
+
+    .book-text {
+
+        font-size: 55px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .taxi-text {
+
+        font-size: 55px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    /* ==========================
+       TAXI BUTTON
+    =========================== */
+
+    .right-content {
+
+        width: 100%;
+
+    }
+
+
+    .taxi-button-container {
+
+        width: 310px;
+
+        height: 310px;
+
+    }
+
+
+    .taxi-button {
+
+        width: 230px;
+
+        height: 230px;
+
+        border-width: 8px;
+
+    }
+
+
+    .taxi-icon {
+
+        width: 105px;
+
+        height: 105px;
+
+    }
+
+
+    .ripple {
+
+        width: 230px;
+
+        height: 230px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+
+    .home-page {
+
+        padding-left: 12px;
+
+        padding-right: 12px;
+
+    }
+
+
+    .main-container {
+
+        gap: 40px;
+
+    }
+
+
+    .logo-image {
+
+        width: 96%;
+
+        max-height: 125px;
+
+    }
+
+
+    .touch-text {
+
+        font-size: 19px;
+
+    }
+
+
+    .book-text {
+
+        font-size: 47px;
+
+    }
+
+
+    .taxi-text {
+
+        font-size: 47px;
+
+    }
+
+
+    .taxi-button-container {
+
+        width: 285px;
+
+        height: 285px;
+
+    }
+
+
+    .taxi-button {
+
+        width: 215px;
+
+        height: 215px;
+
+    }
+
+
+    .ripple {
+
+        width: 215px;
+
+        height: 215px;
+
+    }
+
+
+    .taxi-icon {
+
+        width: 95px;
+
+        height: 95px;
+
+    }
+
+}
+.taxi-button-container {
+    transition: transform 0.3s ease;
+}
+
+.taxi-button-container.clicked {
+    transform: scale(0.45);
+}

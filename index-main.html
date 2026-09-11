@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vale Executive Cars</title>
+
+    <link rel="stylesheet" href="style-main.css">
+
+</head>
+
+
+<body>
+
+    <main class="home-page">
+
+        <div class="main-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <section class="left-content">
+
+
+                <!-- LOGO -->
+
+                <div class="logo-container">
+
+                    <img
+                        src="8a250488-bbb4-47af-ace9-a656e7cc3581.png"
+                        alt="Vale Executive Cars"
+                        class="logo-image"
+                    >
+
+                </div>
+
+
+                <!-- BOOKING BUTTON -->
+
+                <div
+                    class="booking-text"
+                    onclick="openBooking()"
+                >
+
+                    <div class="touch-text">
+                        TOUCH HERE TO
+                    </div>
+
+                    <div class="book-text">
+                        BOOK A
+                    </div>
+
+                    <div class="taxi-text">
+                        TAXI RIDE
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- RIGHT SIDE -->
+
+            <section class="right-content">
+
+
+                <div
+                    id="taxibutton"
+                    class="taxi-button-container"
+                >
+
+                    <span class="ripple ripple-one"></span>
+
+                    <span class="ripple ripple-two"></span>
+
+                    <span class="ripple ripple-three"></span>
+
+
+                    <div class="taxi-button">
+
+                        <img
+                            src="TAXI (1).png"
+                            alt="Taxi"
+                            class="taxi-icon"
+                        >
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const taxibutton =
+            document.getElementById("taxibutton");
+
+
+        function openBooking() {
+
+            taxibutton.classList.add("clicked");
+
+            setTimeout(function () {
+
+                window.location.href = "index.html";
+
+            }, 40);
+
+        }
+
+
+        taxibutton.addEventListener(
+            "click",
+            openBooking
+        );
+
+    </script>
+
+</body>
+
+</html>

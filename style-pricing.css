@@ -1,0 +1,1032 @@
+/* =====================================================
+   VALE EXECUTIVE CARS
+   PRICING PAGE
+===================================================== */
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+
+    --background: #00201c;
+
+    --gold: #c9942e;
+
+    --gold-light: #f0b83f;
+
+    --text: #eeb43b;
+
+    --white: #f5f2e9;
+
+    --muted: rgba(245, 242, 233, 0.58);
+
+}
+
+
+body {
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    min-height: 100vh;
+
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.pricing-page {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    min-height: 100vh;
+
+    padding:
+        35px
+        35px
+        30px;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.pricing-header {
+
+    display: grid;
+
+    grid-template-columns:
+        80px
+        1fr
+        80px;
+
+    align-items: center;
+
+}
+
+
+.pricing-header h1 {
+
+    text-align: center;
+
+    font-size: 44px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.back-button {
+
+    background: none;
+
+    border: none;
+
+    color: var(--gold-light);
+
+    font-size: 48px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+
+.header-line {
+
+    height: 2px;
+
+    background: var(--gold);
+
+    margin-top: 32px;
+
+}
+
+
+/* =====================================================
+   JOURNEY
+===================================================== */
+
+.journey {
+
+    min-height: 185px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+.location-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 165px;
+
+}
+
+
+.location-icon {
+
+    font-size: 35px;
+
+    color: var(--gold-light);
+
+}
+
+
+.location-label {
+
+    display: block;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.location-box strong {
+
+    font-size: 26px;
+
+}
+
+
+.journey-middle {
+
+    width: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.small-route-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+}
+
+
+.car-circle {
+
+    width: 58px;
+
+    height: 58px;
+
+    background: var(--gold);
+
+    border-radius: 50%;
+
+    margin: 0 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+}
+
+
+.journey-line {
+
+    height: 5px;
+
+    background: var(--gold);
+
+    flex: 1;
+
+}
+
+
+/* =====================================================
+   DISTANCE
+===================================================== */
+
+.distance-section {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.distance-section label {
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+}
+
+
+.distance-input-wrapper {
+
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.distance-input-wrapper input {
+
+    width: 100px;
+
+    padding: 9px 12px;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    color: var(--white);
+
+    font-size: 16px;
+
+}
+
+
+.distance-input-wrapper span {
+
+    padding-right: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.distance-conversion {
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--muted);
+
+}
+
+
+/* =====================================================
+   VEHICLE GRID
+===================================================== */
+
+.vehicle-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+
+}
+
+
+/* =====================================================
+   VEHICLE CARD
+===================================================== */
+
+.vehicle-card {
+
+    min-height: 600px;
+
+    border: 2px solid var(--gold);
+
+    border-radius: 20px;
+
+    position: relative;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    padding:
+        28px
+        14px
+        20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        border-width 0.2s ease;
+
+}
+
+
+.vehicle-card:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.vehicle-card.selected {
+
+    border-width: 3px;
+
+}
+
+
+/* =====================================================
+   POPULAR
+===================================================== */
+
+.popular-label {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    background: var(--gold);
+
+    color: #061a16;
+
+    padding:
+        7px
+        13px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    font-weight: 900;
+
+}
+
+
+/* =====================================================
+   SELECTION CIRCLE
+===================================================== */
+
+.selection-circle {
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 40px;
+
+    height: 40px;
+
+    border:
+        2px solid
+        var(--gold);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    font-weight: 900;
+
+}
+
+
+.selection-circle.checked {
+
+    background: var(--gold);
+
+    color: #06201b;
+
+}
+
+
+/* =====================================================
+   VEHICLE IMAGE AREA
+===================================================== */
+
+.vehicle-picture {
+
+    height: 235px;
+
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+
+}
+
+
+/*
+   This is only a temporary placeholder.
+
+   When you give me your actual car image URLs,
+   replace the .car-placeholder element with:
+
+   <img src="YOUR-IMAGE-URL" class="vehicle-img">
+*/
+
+
+.car-placeholder {
+
+    width: 82%;
+
+    height: 105px;
+
+    border:
+        5px solid
+        rgba(245, 242, 233, 0.7);
+
+    border-radius:
+        55% 55%
+        20% 20%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        rgba(245, 242, 233, 0.5);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    position: relative;
+
+}
+
+
+.car-placeholder::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 42%;
+
+    height: 60px;
+
+    border:
+        4px solid
+        rgba(245, 242, 233, 0.65);
+
+    border-bottom: none;
+
+    border-radius:
+        70% 70%
+        0 0;
+
+    top: -50px;
+
+}
+
+
+.car-placeholder::after {
+
+    content: "●                              ●";
+
+    white-space: pre;
+
+    position: absolute;
+
+    bottom: -42px;
+
+    left: 0;
+
+    width: 100%;
+
+    font-size: 28px;
+
+    color:
+        rgba(245, 242, 233, 0.75);
+
+}
+
+
+/* =====================================================
+   VEHICLE TITLE
+===================================================== */
+
+.vehicle-card h2 {
+
+    min-height: 90px;
+
+    font-size: 38px;
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    margin-top: 5px;
+
+}
+
+
+.vehicle-card p {
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+}
+
+
+/* =====================================================
+   FARE BOX
+===================================================== */
+
+.fare-box {
+
+    position: absolute;
+
+    bottom: 18px;
+
+    left: 14px;
+
+    right: 14px;
+
+    min-height: 72px;
+
+    border:
+        2px solid
+        var(--gold);
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 16px;
+
+}
+
+
+.vehicle-card.selected .fare-box {
+
+    background: var(--gold);
+
+    color: #061b17;
+
+}
+
+
+.fare-box span {
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+}
+
+
+.fare-box strong {
+
+    font-size: 30px;
+
+}
+
+
+/* =====================================================
+   BREAKDOWN
+===================================================== */
+
+.breakdown {
+
+    margin-top: 17px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    border-radius: 17px;
+
+    padding:
+        18px
+        23px;
+
+}
+
+
+.breakdown-header {
+
+    border-bottom:
+        1px solid
+        rgba(201, 148, 46, 0.4);
+
+    padding-bottom: 12px;
+
+    margin-bottom: 4px;
+
+}
+
+
+.breakdown-header h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.breakdown-header span {
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+}
+
+
+.breakdown-row {
+
+    min-height: 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid
+        rgba(201, 148, 46, 0.2);
+
+    gap: 20px;
+
+}
+
+
+.breakdown-row span {
+
+    color:
+        rgba(245, 242, 233, 0.75);
+
+}
+
+
+.breakdown-row strong {
+
+    text-align: right;
+
+}
+
+
+.final-breakdown {
+
+    border-bottom: none;
+
+    font-size: 19px;
+
+    padding-top: 7px;
+
+}
+
+
+/* =====================================================
+   BOTTOM
+===================================================== */
+
+.bottom-section {
+
+    display: grid;
+
+    grid-template-columns:
+        1.55fr
+        1fr
+        1fr;
+
+    gap: 12px;
+
+    margin-top: 16px;
+
+}
+
+
+.total-box,
+.review-button,
+.cancel-button {
+
+    min-height: 82px;
+
+    border-radius: 15px;
+
+}
+
+
+/* =====================================================
+   TOTAL
+===================================================== */
+
+.total-box {
+
+    border:
+        2px solid
+        var(--gold);
+
+    padding:
+        14px
+        20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.total-title {
+
+    display: block;
+
+    font-size: 15px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+}
+
+
+.total-box small {
+
+    display: block;
+
+    margin-top: 7px;
+
+    font-size: 14px;
+
+    color:
+        rgba(245, 242, 233, 0.65);
+
+}
+
+
+.total-box strong {
+
+    font-size: 34px;
+
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.review-button,
+.cancel-button {
+
+    font-size: 19px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+}
+
+
+.review-button {
+
+    border:
+        2px solid
+        var(--gold-light);
+
+    background:
+        var(--gold-light);
+
+    color: #061a16;
+
+}
+
+
+.cancel-button {
+
+    border:
+        2px solid
+        var(--gold);
+
+    background: transparent;
+
+    color: var(--gold);
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .vehicle-container {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .vehicle-card {
+
+        min-height: 540px;
+
+    }
+
+
+    .bottom-section {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .pricing-page {
+
+        padding:
+            22px
+            14px;
+
+    }
+
+
+    .pricing-header {
+
+        grid-template-columns:
+            45px
+            1fr
+            45px;
+
+    }
+
+
+    .pricing-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .back-button {
+
+        font-size: 35px;
+
+    }
+
+
+    .journey {
+
+        gap: 8px;
+
+    }
+
+
+    .location-box {
+
+        min-width: 105px;
+
+    }
+
+
+    .location-box strong {
+
+        font-size: 18px;
+
+    }
+
+
+    .location-label {
+
+        font-size: 12px;
+
+    }
+
+
+    .journey-middle {
+
+        width: 75px;
+
+    }
+
+
+    .car-circle {
+
+        width: 48px;
+
+        height: 48px;
+
+        font-size: 20px;
+
+    }
+
+
+    .vehicle-card h2 {
+
+        font-size: 30px;
+
+    }
+
+
+    .fare-box strong {
+
+        font-size: 25px;
+
+    }
+
+
+    .total-box strong {
+
+        font-size: 27px;
+
+    }
+
+}
